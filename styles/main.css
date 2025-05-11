@@ -578,7 +578,7 @@ footer {
   display: none;
   position: absolute;
   /* push it down a bit so it doesn’t overlap the underline */
-  top: calc(100% + 0.5rem);
+  top: calc(100% + 0.14rem);
   left: 0;
   background: #fff;      /* white background */
   border: 1px solid #e0e0e0;
