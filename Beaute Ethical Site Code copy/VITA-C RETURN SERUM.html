@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles/main.css" />
+  <style>
+    /* —— Page‐specific CSS —— */
+    .breadcrumb {
+      font-size: 0.9rem;
+      margin: 2rem 0 1rem;
+    }
+    .breadcrumb a {
+      color: var(--text-light);
+    }
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+
+    .product-hero {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 4rem 0;
+      align-items: flex-start;
+    }
+    .product-hero .image {
+      flex: 1 1 400px;
+    }
+    .product-hero .image img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .product-hero .info {
+      flex: 1 1 300px;
+    }
+    .product-hero .info h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .product-hero .info .category {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+    }
+
+    .product-details-box {
+      background-color: var(--off-white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2rem;
+      margin-bottom: 4rem;
+    }
+    .product-details-box table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .product-details-box th,
+    .product-details-box td {
+      padding: 1rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      text-align: left;
+    }
+    .product-details-box th {
+      width: 25%;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .related-products {
+      margin: 4rem 0;
+    }
+    .related-products h2 {
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1.5rem;
+    }
+    .related-card {
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+      background: var(--white);
+      text-align: center;
+      transition: var(--transition);
+    }
+    .related-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .related-card span {
+      display: block;
+      padding: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+    .related-card:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      .product-hero {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body class="page-merikit">
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="logo">BEAUTE ETHICAL</a>
+        <button class="hamburger"><div></div><div></div><div></div></button>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="products.html" class="dropdown-toggle">Products</a>
+            <ul class="dropdown-menu">
+              <li><a href="ronas.html">RONAS</a></li>
+              <li><a href="merikit.html">MERIKIT</a></li>
+              <li><a href="orjade.html">OR’JADE</a></li>
+              <li><a href="bethique.html">B’ETHIQUE</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="account.html">My Account</a></li>
+          <li class="cart-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5
+                   M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17
+                   m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+            <span class="cart-count">0</span>
+            <div class="cart-dropdown"><p>Your cart is empty</p></div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="container">
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+      <a href="index.html">Home</a> ›
+      <a href="products.html">Products</a> ›
+      <span>VITA-C RETURN SERUM</span>
+    </div>
+
+<!-- Hero + Details all in one flex section -->
+<section class="product-hero">
+    <div class="image">
+      <img
+        src="images/Merikit/VITA-C RETURN SERUM.jpg"
+        alt="VITA-C RETURN SERUM"
+      />
+    </div>
+  
+    <div class="info-details">
+      <!-- title + category -->
+      <div class="info">
+        <h1>VITA-C RETURN SERUM</h1>
+        <p class="category">VITA-C Line</p>
+      </div>
+  
+      <!-- product details box -->
+      <div class="product-details-box">
+        <table>
+          <tr>
+            <th>Product Features</th>
+            <td>
+              It soothes skin irritation and strengthens the moisture barrier. Made from all-green grade ingredients to maintain hydration while supporting whitening and anti-wrinkle care.<br />
+              <em>缓解皮肤刺激、加强保湿屏障的维他命C精华。天然成分，有效美白与抗皱。</em>
+            </td>
+          </tr>
+          <tr>
+            <th>Skin Type</th>
+            <td>
+              All skin types<br />
+              <em>所有肤质适用</em>
+            </td>
+          </tr>
+          <tr>
+            <th>Main Ingredient</th>
+            <td>
+              <strong>• Centella asiatica leaf water</strong><br />
+              Wound healing, antioxidant and moisturizing effects<br />
+              <em>积雪草叶水：促进伤口愈合，抗氧化，保湿</em><br /><br />
+  
+              <strong>• Lime extract</strong><br />
+              Antioxidant, anti-inflammatory, antibacterial (source of vitamin C)<br />
+              <em>青柠提取物：抗氧化、抗炎、抗菌</em><br /><br />
+  
+              <strong>• Raspberry extract</strong><br />
+              Rich in polyphenols, anthocyanins, omega-3, vitamins. Anti-aging, moisturizing and calming.<br />
+              <em>覆盆子提取物：富含多酚、花青素、维生素、Ω-3，有助抗老保湿与镇静</em>
+            </td>
+          </tr>
+          <tr>
+            <th>How to Use</th>
+            <td>
+              After using VITA-C13 ampoule, apply return serum gently and absorb into the skin.<br />
+              <em>使用VITA-C13安瓶后，轻柔地涂抹精华于肌肤并吸收。</em>
+            </td>
+          </tr>
+          <tr>
+            <th>Content</th>
+            <td>
+              50ml<br />
+              <em>50毫升</em>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </section>
+  
+  
+<!-- Related Products Carousel with Arrows -->
+<section class="related-products-carousel">
+  <h2>Related Products</h2>
+
+  <div class="carousel-container">
+    <button class="carousel-btn prev" aria-label="Scroll Left">&#10094;</button>
+
+    <div class="carousel-track" id="carousel-track">
+  <!-- Paste all your product <a> blocks here -->
+    <a href="VITA KIT.html" class="related-card"><img src="images/Merikit/VITA KIT.jpg" alt="VITA KIT"><span>VITA KIT</span></a>
+    <a href="VITA-C RETURN CREAM.html" class="related-card"><img src="images/Merikit/VITA-C RETURN CREAM.jpg" alt="VITA-C RETURN CREAM"><span>VITA-C RETURN CREAM</span></a>
+    <a href="SUPER MOISTURE CLEANSING.html" class="related-card"><img src="images/Merikit/Super Moisture Cleansing  .jpg" alt="SUPER MOISTURE CLEANSING"><span>SUPER MOISTURE CLEANSING</span></a>
+    <a href="SUPER AQUA MINERAL TONER.html" class="related-card"><img src="images/Merikit/Super Aqua Mineral Toner.jpg" alt="SUPER AQUA MINERAL TONER"><span>SUPER AQUA MINERAL TONER</span></a>
+    <a href="SUPER MOISTURIZING SERUM.html" class="related-card"><img src="images/Merikit/Super Moisturizing Serum  .jpg" alt="SUPER MOISTURIZING SERUM"><span>SUPER MOISTURIZING SERUM</span></a>
+    <a href="SUPER MOISTURIZING CREAM.html" class="related-card"><img src="images/Merikit/Super Moisturizing Cream.jpg" alt="SUPER MOISTURIZING CREAM"><span>SUPER MOISTURIZING CREAM</span></a>
+    <a href="SUPER MOISTURE MASSAGE CREAM.html" class="related-card"><img src="images/Merikit/Super Moisture Massage Cream.jpg" alt="SUPER MOISTURE MASSAGE CREAM"><span>SUPER MOISTURE MASSAGE CREAM</span></a>
+    <a href="AQUA MEMORIZE SKIN.html" class="related-card"><img src="images/Merikit/Aqua Memorize Skin.jpg" alt="AQUA MEMORIZE SKIN"><span>AQUA MEMORIZE SKIN</span></a>
+    <a href="AQUA MEMORIZE CREAM.html" class="related-card"><img src="images/Merikit/Aqua Memorize Cream.jpg" alt="AQUA MEMORIZE CREAM"><span>AQUA MEMORIZE CREAM</span></a>
+    <a href="AQUA MEMORIZE MASK.html" class="related-card"><img src="images/Merikit/Aqua Memorize Mask  .jpg" alt="AQUA MEMORIZE MASK"><span>AQUA MEMORIZE MASK</span></a>
+    <a href="REGENERATING CALMING SERUM.html" class="related-card"><img src="images/Merikit/Regenerating Calming Serum.jpg" alt="REGENERATING CALMING SERUM"><span>REGENERATING CALMING SERUM</span></a>
+    <a href="REGENERATING CALMING CREAM.html" class="related-card"><img src="images/Merikit/Regenerating Calming Cream.jpg" alt="REGENERATING CALMING CREAM"><span>REGENERATING CALMING CREAM</span></a>
+    <a href="REGENERATING CALMING MASK.html" class="related-card"><img src="images/Merikit/Regenerating Calming Mask  .jpg" alt="REGENERATING CALMING MASK"><span>REGENERATING CALMING MASK</span></a>
+    <a href="CLARITY SERUM.html" class="related-card"><img src="images/Merikit/Clarity Serum  .jpg" alt="CLARITY SERUM"><span>CLARITY SERUM</span></a>
+    <a href="CLARITY C CREAM.html" class="related-card"><img src="images/Merikit/Clarity C Cream.jpg" alt="CLARITY C CREAM"><span>CLARITY C CREAM</span></a>
+    <a href="CLARITY MASK.html" class="related-card"><img src="images/Merikit/Clarity Mask  .jpg" alt="CLARITY MASK"><span>CLARITY MASK</span></a>
+    <a href="AC INFUSION SERUM.html" class="related-card"><img src="images/Merikit/AC Infusion Serum  .jpg" alt="AC INFUSION SERUM"><span>AC INFUSION SERUM</span></a>
+    <a href="AC INFUSION MASK.html" class="related-card"><img src="images/Merikit/AC Infusion Mask.jpg" alt="AC INFUSION MASK"><span>AC INFUSION MASK</span></a>
+    <a href="Aqua Shining Sunblock.html" class="related-card"><img src="images/Merikit/Aqua Shining Sunblock  .jpg" alt="Aqua Shining Sunblock"><span>Aqua Shining Sunblock</span></a>
+    <a href="Multi-Protection Balm.html" class="related-card"><img src="images/Merikit/Multi-Protection Balm  .jpg" alt="Multi-Protection Balm"><span>Multi-Protection Balm</span></a>
+    <a href="MULTI HYDRO AMPOULE.html" class="related-card"><img src="images/Merikit/Multi Hydro Ampoule  .jpg" alt="MULTI HYDRO AMPOULE"><span>MULTI HYDRO AMPOULE</span></a>
+    <a href="MULTI CAMPO AMPOULE.html" class="related-card"><img src="images/Merikit/Multi Campo Ampoule.jpg" alt="MULTI CAMPO AMPOULE"><span>MULTI CAMPO AMPOULE</span></a>
+    <a href="MULTI-PEPTIDE AMPOULE.html" class="related-card"><img src="images/Merikit/Multi-peptide ampoule  .jpg" alt="MULTI-PEPTIDE AMPOULE"><span>MULTI-PEPTIDE AMPOULE</span></a>
+    <a href="MULTI VITAMIN AMPOULE.html" class="related-card"><img src="images/Merikit/Multi Vitamin Ampoule  .jpg" alt="MULTI VITAMIN AMPOULE"><span>MULTI VITAMIN AMPOULE</span></a>
+    <a href="WRINKLE CARE CREAM.html" class="related-card"><img src="images/Merikit/Wrinkle care cream  .jpg" alt="WRINKLE CARE CREAM"><span>WRINKLE CARE CREAM</span></a>
+    <a href="DOUBLE PEELING GEL.html" class="related-card"><img src="images/Merikit/Double Peeling Gel  .jpg" alt="DOUBLE PEELING GEL"><span>DOUBLE PEELING GEL</span></a>
+    <a href="GRAIN RICE FOAM.html" class="related-card"><img src="images/Merikit/Grain Rice Foam  .jpg" alt="GRAIN RICE FOAM"><span>GRAIN RICE FOAM</span></a>
+    <a href="AQUA FACIAL FOAM.html" class="related-card"><img src="images/Merikit/Aqua Facial Foam  .jpg" alt="AQUA FACIAL FOAM"><span>AQUA FACIAL FOAM</span></a>
+    <a href="PURE ALOE VERA.html" class="related-card"><img src="images/Merikit/Pure Aloe Vera  .jpg" alt="PURE ALOE VERA"><span>PURE ALOE VERA</span></a>
+    <a href="COENZYME Q10 MASSAGE CREAM.html" class="related-card"><img src="images/Merikit/Coenzyme Q10 Massage Cream  .jpg" alt="COENZYME Q10 MASSAGE CREAM"><span>COENZYME Q10 MASSAGE CREAM</span></a>
+    <a href="DETO BUBBLE KIT - CARBOXY CO2.html" class="related-card"><img src="images/Merikit/Deto Bubble Kit - Carboxy CO2 Oxygen Detox Facial Set.png" alt="DETO BUBBLE KIT - CARBOXY CO2"><span>DETO BUBBLE KIT - CARBOXY CO2</span></a>
+  </div>
+  <button class="carousel-btn next" aria-label="Scroll Right">&#10095;</button>
+</div>
+</section>
+</main>
+
+
+<!-- Footer -->
+<footer>
+<div class="container">
+  <div class="footer-content">
+    <div class="footer-column">
+      <h3>Beaute Ethical</h3>
+      <p>Premium distributor of professional salon-grade Korean skincare products.</p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/beauteethicalsupplies/" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+               viewBox="0 0 16 16">
+            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002
+                     8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05h2.03V6.275c0-2.017
+                     1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993
+                     0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326h-1.864V16c3.824-.604
+                     6.75-3.934 6.75-7.951z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-column">
+      <h3>Links</h3>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="account.html">My Account</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Contact</h3>
+      <p>Email: beauteethical@yahoo.com.sg</p>
+      <p>Phone: +65 8188 0911</p>
+      <p>Address: 30 Ceylon Road</p>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>&copy; 2025 Beaute Ethical. All rights reserved.</p>
+  </div>
+</div>
+</footer>
+
+<script src="scripts/main.js"></script>
+</body>
+</html>

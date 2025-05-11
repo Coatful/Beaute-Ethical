@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles/main.css" />
+  <style>
+    /* —— Page‐specific CSS —— */
+    .breadcrumb {
+      font-size: 0.9rem;
+      margin: 2rem 0 1rem;
+    }
+    .breadcrumb a {
+      color: var(--text-light);
+    }
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+
+    .product-hero {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 4rem 0;
+      align-items: flex-start;
+    }
+    .product-hero .image { flex: 1 1 400px; }
+    .product-hero .image img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .product-hero .info { flex: 1 1 300px; }
+    .product-hero .info h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    .product-hero .info .category {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+    }
+
+    .product-details-box {
+      background-color: var(--off-white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2rem;
+      margin-bottom: 4rem;
+    }
+    .product-details-box table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .product-details-box th,
+    .product-details-box td {
+      padding: 1rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      text-align: left;
+    }
+    .product-details-box th {
+      width: 25%;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .related-products {
+      margin: 4rem 0;
+    }
+    .related-products h2 {
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1.5rem;
+    }
+    .related-card {
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+      background: var(--white);
+      text-align: center;
+      transition: var(--transition);
+    }
+    .related-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .related-card span {
+      display: block;
+      padding: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+    .related-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 768px) {
+      .product-hero { flex-direction: column; }
+    }
+  </style>
+</head>
+<body class="page-ronas">
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="logo">BEAUTE ETHICAL</a>
+        <button class="hamburger"><div></div><div></div><div></div></button>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="products.html" class="dropdown-toggle">Products</a>
+            <ul class="dropdown-menu">
+              <li><a href="ronas.html">RONAS</a></li>
+              <li><a href="merikit.html">MERIKIT</a></li>
+              <li><a href="orjade.html">OR’JADE</a></li>
+              <li><a href="bethique.html">B’ETHIQUE</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a> › 
+      <a href="products.html">Products</a> › 
+      <span>Golden Time Expert Ampoule</span>
+    </div>
+
+    <section class="product-hero">
+      <div class="image">
+        <img src="images/Ronas/Golden Time Expert Ampoule  .jpg" alt="Golden Time Expert Ampoule" />
+      </div>
+
+      <div class="info-details">
+        <div class="info">
+          <h1>Golden Time Expert Ampoule</h1>
+          <p class="category">Gold Line</p>
+        </div>
+
+        <div class="product-details-box">
+          <table>
+            <tr>
+              <th>Product Features</th>
+              <td>
+                Golden glow ampoule for smooth and moisturized skin. This anti-wrinkle ampoule nourishes, firms, and revitalizes the skin with 24K (99.9%) gold capsules for smooth skin.<br />
+                <em>金色光泽安瓶，令肌肤光滑滋润。这款抗皱安瓶含有24K（99.9%）金胶囊，滋养、紧致并焕活肌肤，使肌肤光滑。</em>
+              </td>
+            </tr>
+            <tr>
+              <th>Skin Type</th>
+              <td>
+                All skin types, dry and dull skin, loose skin<br />
+                <em>所有肤质，干燥暗沉肌肤，松弛肌肤</em>
+              </td>
+            </tr>
+            <tr>
+              <th>Main Ingredient</th>
+              <td>
+                • Gold – Skin detoxing<br />
+                &nbsp;&nbsp;黄金 — 肌肤排毒<br />
+                • MULTIBERRY extract – Helps firm and refresh the skin<br />
+                &nbsp;&nbsp;多莓果提取物 — 有助于紧致和焕新肌肤<br />
+                • Panthenol – Nourishing and revitalizing<br />
+                &nbsp;&nbsp;泛醇 — 滋养和焕活<br />
+                • Trehalose – Protects cell membrane for moisture retention in the skin<br />
+                &nbsp;&nbsp;海藻糖 — 保护细胞膜，保持肌肤水分<br />
+                Royal jelly extract – Skin conditioning<br />
+                &nbsp;&nbsp;蜂王浆提取物 — 肌肤调理<br />
+                • Adenosine – Anti-wrinkle effect<br />
+                &nbsp;&nbsp;腺苷 — 抗皱效果<br />
+                • Tocopheryl Acetate – Protects the skin and retains moisture, skin conditioning<br />
+                &nbsp;&nbsp;醋酸生育酚 — 保护肌肤并保持水分，调理肌肤
+              </td>
+            </tr>
+            <tr>
+              <th>How to Use</th>
+              <td>
+                After the toner, apply a suitable amount on a cotton pad and wipe the face. Pat to absorb.<br />
+                <em>使用爽肤水后，取适量安瓶于化妆棉上，擦拭面部，并轻拍至吸收。</em>
+              </td>
+            </tr>
+            <tr>
+              <th>Content</th>
+              <td>
+                47 ml / 1.6 oz<br />
+                <em>47 毫升 / 1.6 盎司</em>
+              </td>
+            </tr>            
+          </table>
+        </div>
+      </div>
+    </section>
+<!-- Related Products -->
+<section class="related-products">
+  <h2>Related Products</h2>
+  <div class="related-grid">
+    <!-- Stem Cell Line -->
+    <a href="Stem Cell Serum.html"   class="related-card"><img src="images/Ronas/Stem Cell Serum.jpg"   alt="Stem Cell Serum"><span>Stem Cell Serum</span></a>
+    <a href="Stem Cell Solution.html"   class="related-card"><img src="images/Ronas/Stem Cell Solution.jpg"   alt="Stem Cell Solution"><span>Stem Cell Solution</span></a>
+    <a href="Stem Cell Coconut Mask.html"   class="related-card"><img src="images/Ronas/Stem Cell Coconut Mask.jpg"   alt="Stem Cell Coconut Mask"><span>Stem Cell Coconut Mask</span></a>
+    <a href="Stem Cell Toner.html"          class="related-card"><img src="images/Ronas/Stem Cell Toner.jpg"          alt="Stem Cell Toner"><span>Stem Cell Toner</span></a>
+    <a href="Stem Cell Ampoule.html"        class="related-card"><img src="images/Ronas/Stem Cell Ampoule.jpg"        alt="Stem Cell Ampoule"><span>Stem Cell Ampoule</span></a>
+    <a href="Stem Cell Hydro Cream.html"    class="related-card"><img src="images/Ronas/Stem Cell Hydro Cream.jpg"    alt="Stem Cell Hydro Cream"><span>Stem Cell Hydro Cream</span></a>
+    <!-- Tox Line -->
+    <a href="Tox Volume Fill Up Essence.html" class="related-card"><img src="images/Ronas/Tox Volume Fill Up Essence.jpg" alt="Tox Volume Fill Up Essence"><span>Tox Volume Essence</span></a>
+    <a href="Tox Volume cream.html"          class="related-card"><img src="images/Ronas/Tox Volume cream.jpg"          alt="Tox Volume Cream"><span>Tox Volume Cream</span></a>
+    <!-- Gold Line -->
+    <a href="Golden Time Expert Cream.html"   class="related-card"><img src="images/Ronas/Golden Time Expert Cream  .jpg"   alt="Golden Time Expert Cream"><span>Golden Time Cream</span></a>
+    <!-- Protection Line -->
+    <a href="Waterfull Green Sun Cream.html" class="related-card"><img src="images/Ronas/Waterfull Green Sun Cream For related products.png" alt="Waterfull Green Sun Cream"><span>Waterfull Sun Cream</span></a>
+    <a href="CC Cream(SPF 38 PA+++).html"     class="related-card"><img src="images/Ronas/CC Cream(SPF 38 PA+++) .jpg"   alt="CC Cream (SPF 38)"><span>CC Cream SPF 38</span></a>
+  </div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer>
+<div class="container">
+  <div class="footer-content">
+    <div class="footer-column">
+      <h3>Beaute Ethical</h3>
+      <p>Premium distributor of professional salon-grade Korean skincare products.</p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/beauteethicalsupplies/" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+               viewBox="0 0 16 16">
+            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002
+                     8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05h2.03V6.275c0-2.017
+                     1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993
+                     0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326h-1.864V16c3.824-.604
+                     6.75-3.934 6.75-7.951z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-column">
+      <h3>Links</h3>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="account.html">My Account</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Contact</h3>
+      <p>Email: beauteethical@yahoo.com.sg</p>
+      <p>Phone: +65 8188 0911</p>
+      <p>Address: 30 Ceylon Road</p>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>&copy; 2025 Beaute Ethical. All rights reserved.</p>
+  </div>
+</div>
+</footer>
+
+<script src="scripts/main.js"></script>
+</body>
+</html>
