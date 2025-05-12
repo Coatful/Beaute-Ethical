@@ -110,7 +110,9 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 0;
+  width: 100%; /* 👈 This makes the navbar stretch full width inside .container */
 }
+
 
 .logo {
   font-family: 'Montserrat', sans-serif;
@@ -689,7 +691,6 @@ footer {
   /* keep your existing columns/rows, then: */
   grid-auto-rows: 1fr;
 }
-}
 /* —— Flex layout for hero + details —— */
 .product-hero {
   display: flex;
@@ -855,4 +856,126 @@ footer {
 }
 .product-info .btn {
   margin-top: auto;
+}
+.contact-info-only {
+  padding: 4rem 2rem;
+  background-color: #fff;
+  text-align: left;
+}
+
+.contact-info-only h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-block {
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.contact-block h3 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.contact-block p,
+.contact-block a {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  text-decoration: none;
+}
+#about-section {
+  background-color: var(--off-white);
+  padding: 4rem 0;
+  margin: 4rem 0;
+}
+
+#about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+#about-section p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  font-weight: 500;
+  color: #222;
+}
+
+.qr-image {
+  max-width: 200px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.qr-image:hover {
+  transform: scale(1.05);
+}
+.qr-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.qr-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.qr-modal.show {
+  visibility: visible;
+  opacity: 1;
+}
+.category-card {
+  position: relative; /* REQUIRED to position overlay */
+  display: block;
+}
+
+.category-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 2rem;
+  transition: var(--transition);
+  text-align: center;
 }
