@@ -101,7 +101,27 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Carousel arrows & scroll wheel support
+    // Optional: auto image labeling logic (disabled by default)
+    /*
+    function applyImageLabels() {
+        const allElements = document.querySelectorAll('*');
+        allElements.forEach(el => {
+            let node = el.previousSibling;
+            while (node && node.nodeType !== 8) {
+                node = node.previousSibling;
+            }
+            if (node && node.nodeType === 8 && node.textContent.includes('IMAGE:')) {
+                const imageName = node.textContent.split('IMAGE:')[1].trim();
+                console.log(`Found image label: ${imageName} for element:`, el);
+            }
+        });
+    }
+    // applyImageLabels();
+    */
+});
+
+// Fix: Run carousel logic only after all images are fully loaded
+window.addEventListener('load', () => {
     const carouselTrack = document.getElementById('carousel-track');
     const btnPrev = document.querySelector('.carousel-btn.prev');
     const btnNext = document.querySelector('.carousel-btn.next');
@@ -125,28 +145,10 @@ document.addEventListener('DOMContentLoaded', function() {
             if (e.deltaY !== 0) {
                 e.preventDefault();
                 carouselTrack.scrollBy({
-                    left: e.deltaY * 2, // Adjust multiplier for speed
+                    left: e.deltaY * 2,
                     behavior: 'smooth'
                 });
             }
         }, { passive: false });
     }
-
-    // Optional: auto image labeling logic (disabled by default)
-    /*
-    function applyImageLabels() {
-        const allElements = document.querySelectorAll('*');
-        allElements.forEach(el => {
-            let node = el.previousSibling;
-            while (node && node.nodeType !== 8) {
-                node = node.previousSibling;
-            }
-            if (node && node.nodeType === 8 && node.textContent.includes('IMAGE:')) {
-                const imageName = node.textContent.split('IMAGE:')[1].trim();
-                console.log(`Found image label: ${imageName} for element:`, el);
-            }
-        });
-    }
-    // applyImageLabels();
-    */
 });
